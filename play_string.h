@@ -5,11 +5,12 @@
 class play_string
 {
 private:
-	char* buf = nullptr;    //указатель на массив чаров
-	unsigned int size = 0;  //длина строки (без '0/')
+	char* buf = nullptr;    //pointer to arr of chars
+	unsigned int size = 0;  //len of string (without '0/')
 	
 public:
-	play_string() : buf(nullptr), size(0) {}  //дефолт конструктор 
-	play_string(const char* str);		      //конструктор из C-строки
-	~play_string();                        	  //дефолт деструктор
+	play_string() : buf(nullptr), size(0) {}  //default constructor
+	play_string(const char* str);		      //constructor with C-string
+	play_string(const play_string& other);	  //copy constructor 
+	~play_string();                        	  //default destructor
 };
